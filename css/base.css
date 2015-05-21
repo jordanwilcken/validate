@@ -1,0 +1,91 @@
+#wrapper {
+  width: 900px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+#concepts-list {
+  float: left;
+  width: 23%;
+}
+
+#concept-list-header {
+  font-size: 22;
+}
+
+#the-container {
+  width: 77%;
+  float: left;
+}
+
+#crud-interface { 
+  border: 1px solid grey;
+  border-radius: 20px;
+  padding: 10px;
+  overflow: auto;
+}
+
+#crud-title {
+  text-align: center;
+  font-size: 22px;
+}
+
+#list-stuff {
+  float: left;
+  width: 40%;
+}
+
+#hand-shapes {
+  margin-top: 10px;
+  overflow-y: auto;
+  height: 300px;
+}
+
+#edit-ui {
+  float: left;
+  width: 60%;
+  padding: 44px 0 0 20px;
+  text-align: center;
+}
+
+#hand-shape-img {
+  height: 150px;
+  margin: 10px 0;
+}
+
+#pedantic-content {
+  margin-top: 10px;
+}
+
+#unfair-label {
+  font-weight: normal;
+}
+
+#unfair-checkbox {
+  margin: 0 4px;
+  position: relative;
+  top: 2px;
+}
+
+p.pedantic {
+  margin-left: 10px;
+}
+
+.concept-name {
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 18;
+}
+
+.hand-shape-input {
+  width: 100%;
+}
+
+.item-name {
+  margin-left: 20px;
+}
+
+.item-thumb {
+  height: 40px;
+}

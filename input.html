@@ -22,7 +22,55 @@
 	<span ng-show="itemForm.theCat.$error.catValidator">The cat, she is bad.</span>
 	<span ng-show="itemForm.theCat.$error.email">The cat, she is not an email.</span>
   </form>
+
+  <form name="realItemForm" novalidate>
+    <input ng-model="catModel"
+		   name="catInput"
+		   cat-validator
+		   required/>
+	</br>
+	<span ng-show="realItemForm.catInput.$error.catValidator">The cat, she is bad.</span>
+	<span ng-show="realItemForm.catInput.$error.required">You MUST enter a category.</span>
+	<span ng-show="realItemForm.catInput.$valid">Now there's a good cat.</span>
+	<br/>
+
+    <input ng-model="selModel"
+		   name="selInput"
+		   cat-validator
+		   required/>
+	</br>
+	<span ng-show="realItemForm.selInput.$error.catValidator">The sel, she is bad.</span>
+	<span ng-show="realItemForm.selInput.$error.required">You MUST enter a selector.</span>
+	<span ng-show="realItemForm.selInput.$valid">Now there's a good sel.</span>
+	<br/>
+
+    <input ng-model="actModel"
+		   name="actInput"
+		   act-validator
+		   required/>
+	</br>
+	<span ng-show="realItemForm.actInput.$error.actValidator">The activity, she is bad.</span>
+	<span ng-show="realItemForm.actInput.$error.required">You MUST enter an activity.</span>
+	<span ng-show="realItemForm.actInput.$valid">Now there's a good activity.</span>
+	<br/>
+
+    <input ng-model="dateModel"
+		   name="dateInput"
+		   type="date"
+		   act-validator
+		   required/>
+	</br>
+	<span ng-show="realItemForm.dateInput.$error.date">The date, she is bad.</span>
+	<span ng-show="realItemForm.dateInput.$error.required">You MUST enter a date.</span>
+	<span ng-show="realItemForm.dateInput.$valid">Now there's a good date.</span>
+	</br>
+
+	<input type="submit"
+		   name="itemSubmit"
+		   ng-disabled="!realItemForm.$valid"/>
+  </form>
   <script type="text/javascript" src="js\validate.js"></script>
   <script type="text/javascript" src="js\cat-validator.js"></script>
+  <script type="text/javascript" src="js\act-validator.js"></script>
 </body>
 </html>

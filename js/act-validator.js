@@ -8,17 +8,17 @@
 /*global $,angular*/
 
 (function () {
-  var CAT_REGEX = /^[A-Z]{3}$/;
+  var ACT_REGEX = /^(\+|-|I|M|R|&)$/;
 
   angular.module("validate").
 
-    directive('catValidator', function () {
+    directive('actValidator', function () {
 
       return {
         require: 'ngModel',
         link: function (scope, element, attrs, ctrl) {
-          ctrl.$validators.catValidator = function(modelValue, viewValue) {
-            return (CAT_REGEX.test(viewValue));
+          ctrl.$validators.actValidator = function(modelValue, viewValue) {
+            return (ACT_REGEX.test(viewValue));
           };
         }
       };

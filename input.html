@@ -4,7 +4,7 @@
 	<title data-ng-bind="pageTitle">Look, Mom!  I can Angularjs!</title>
 
     <!-- Angular Libraries -->
-    <script type="text/javascript" src="js/angular/angular.js"></script>
+    <script type="text/javascript" src="js/lib/angular.js"></script>
 
     <!-- Other Third Party Javascript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -13,6 +13,16 @@
 
 </head>
 <body>
-  <input value="I am an input"/>
+  <form name="itemForm" novalidate>
+    <input type="email"
+		   ng-model="theCat"
+		   name="theCat"
+		   cat-validator/>
+	</br>
+	<span ng-show="itemForm.theCat.$error.catValidator">The cat, she is bad.</span>
+	<span ng-show="itemForm.theCat.$error.email">The cat, she is not an email.</span>
+  </form>
+  <script type="text/javascript" src="js\validate.js"></script>
+  <script type="text/javascript" src="js\cat-validator.js"></script>
 </body>
 </html>

@@ -69,8 +69,21 @@
 		   name="itemSubmit"
 		   ng-disabled="!realItemForm.$valid"/>
   </form>
+
+  <form name="a"
+		novalidate>
+  <input type="date"
+		 name="b"
+	     ng-model="dateModel"
+		 check-available
+		 required>
+  </br>
+  <span ng-show="a.b.$pending.checkAvailable">Let's see if I'm available...</span>
+  <span ng-show="a.b.$error.checkAvailable">Sorry, I'm busy that night.</span>
+  </form>
   <script type="text/javascript" src="js\validate.js"></script>
   <script type="text/javascript" src="js\cat-validator.js"></script>
   <script type="text/javascript" src="js\act-validator.js"></script>
+  <script type="text/javascript" src="js\check.available.js"></script>
 </body>
 </html>
